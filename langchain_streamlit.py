@@ -50,8 +50,6 @@ if openai_api_key:
     res = None  # Initialize res outside the with block
 
     with st.form("my_form"):
-        if os.environ["OPENAI_API_KEY"]:
-            openai_api_key = os.environ["OPENAI_API_KEY"]
         text = st.text_area('Enter text:', 'what is a tuple in python')
         submitted = st.form_submit_button('Submit')
         if not openai_api_key.startswith('sk-'):
